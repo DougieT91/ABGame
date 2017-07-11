@@ -13,7 +13,7 @@ public class FileIOImpl implements FileIO {
         ArrayList<String> textlines = new ArrayList<>();
 
 
-        if(file.contains("./")){
+        if(file.contains("/")){
         }else{
             file  = ("./files/input/" + file);
         }
@@ -96,7 +96,7 @@ public class FileIOImpl implements FileIO {
     public void writeFile(String filename, String msg) {
         String file;
         try {
-            if(filename.contains("./")){
+            if(filename.contains("/")){
                 file = filename;
             }else{
                 file  = ("./files/output/" + filename);

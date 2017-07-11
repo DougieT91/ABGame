@@ -71,27 +71,23 @@ public class ABGameMain {
     }
 
     public static String playGame(ArrayList<StringBuilder> sbArr) {
-        //StringBuilder buffer, initial = sbArr.get(0), target = sbArr.get(1);
-        //buffer = initial;
         String initial=sbArr.get(0).toString(), target = sbArr.get(1).toString();
 
-        for (initial = initial.toString(); initial.length() <= target.length(); ) {
-            if(initial.length()==target.length()){
-                if(initial.equals(target)){
-                    return "possible";
-                }else{
-                    return "impossible";
-                }
-            }
+        for (int i=0 ; i< target.length()-initial.length(); i++) {
+
             if (target.contains(optionA(initial))) {
                 initial = optionA(initial);
 
             }else if(target.contains(optionB(initial))){
                 initial=optionB(initial);
-
+            }else if(target.contains(optionBr(initial))){
+                initial=optionB(initial);
             }else{
                 return "impossible";
             }
+        }
+        if(!(target.equals(initial))){
+            return "impossible";
         }
         return "possible";
     }
@@ -104,16 +100,20 @@ public class ABGameMain {
     }
 
     public static String optionB(String initial) {
-        String B;
+
         StringBuilder sb = new StringBuilder(initial);
         sb.reverse();
         sb.append('B');
-        B = sb.toString();
+        String B = sb.toString();
         return B;
     }
 
-
-
-
+    public static String optionBr(String initial) {
+        initial=optionB(initial);
+        StringBuilder sb = new StringBuilder(initial);
+        sb.reverse();
+        String B = sb.toString();
+        return B;
+    }
 
 }
