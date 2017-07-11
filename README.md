@@ -12,6 +12,7 @@ to run the program,
 ####     *- The default lookup location for the input file is ./files/input/ 
 ####     *- The default save location for the output file is ./files/output/
 
-The input (Text) for the AND equation should be one line of comma seperated integer values. For example
+The input (Text) for the AND equation should be on 2 lines. the first one with the initial String, and the secon with the target. For example
 
-{12,8,33,56,8556,1}
+"B"
+"ABBA"
