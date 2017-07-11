@@ -14,5 +14,5 @@ to run the program,
 
 The input (Text) for the AND equation should be on 2 lines. the first one with the initial String, and the secon with the target. For example
 
-"B"
-"ABBA"
+##### "B"
+##### "ABBA"
