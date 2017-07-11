@@ -4,7 +4,7 @@ to run the program,
 # open the terminal and type the command 
 #   java -jar ANDEquation.jar <input.txt> <output.txt>
 
-# The <input.txt> <output.txt> values should either be 
+### The <input.txt> <output.txt> values should either be 
 #     - an absolute path to the text file or 
 #     - just the file name. (the program will lookup/save the file in default location) 
 #     - In this case you need to create a directory named "files" in the root directory, where the jar file is located. 
